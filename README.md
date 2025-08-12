@@ -1,27 +1,18 @@
-# MyEcom1
+🎓 Course Marketplace Application
+A web-based platform where users can browse and enroll in courses, and administrators can manage course content and enrollment details.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.15.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🚀 Features
+👨‍🎓 User Side
+View Courses: Browse all available courses on the homepage.
+Enroll in Courses: Select and enroll in any course of interest.
+Responsive Design: Optimized for desktop and mobile devices.
+🔐 Admin Side
+Admin Authentication: Secure login required to access admin functionalities.
+Course Management:
+Create new courses
+Edit existing courses
+Delete courses
+Enrollment Management:
+View enrollment details
+Delete enrollments
+Logout: Securely log out and return to the main course listing page.

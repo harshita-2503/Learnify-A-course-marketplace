@@ -1,0 +1,345 @@
+/* Orders Table CSS - Matching Learnify Theme */
+
+/* Table container */
+.table-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border: 1px solid rgba(230, 230, 250, 0.3);
+}
+
+/* Table styling */
+.table {
+  margin-bottom: 0;
+  background: transparent;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+/* Table header - matching the purple gradient theme */
+.table thead {
+  background: linear-gradient(
+    135deg,
+    #8b7cf6 0%,
+    #a855f7 50%,
+    #c084fc 100%
+  );
+  position: relative;
+}
+
+.table thead th {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 1.2rem 1.5rem;
+  border: none;
+  position: relative;
+  background: transparent;
+  text-align: left;
+}
+
+.table thead th:first-child {
+  border-top-left-radius: 20px;
+}
+
+.table thead th:last-child {
+  border-top-right-radius: 20px;
+}
+
+/* Table body styling */
+.table tbody {
+  background: #fff;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(
+    135deg,
+    #f8faff 0%,
+    #f3f4ff 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(139, 124, 246, 0.1);
+}
+
+.table tbody tr:nth-child(even) {
+  background: rgba(248, 250, 255, 0.4);
+}
+
+.table tbody tr:nth-child(even):hover {
+  background: linear-gradient(
+    135deg,
+    #f8faff 0%,
+    #f3f4ff 100%
+  );
+}
+
+.table tbody td {
+  padding: 1.2rem 1.5rem;
+  border: none;
+  vertical-align: middle;
+  color: #374151;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(230, 230, 250, 0.2);
+  font-weight: 500;
+}
+
+/* Customer name styling */
+.table tbody td:first-child {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+/* Course name styling */
+.table tbody td:nth-child(2) {
+  color: #8b7cf6;
+  font-weight: 600;
+}
+
+/* Course ID styling - badge-like appearance */
+.table tbody td:nth-child(3) {
+  font-family: "SF Mono", "Monaco", "Cascadia Code",
+    "Roboto Mono", monospace;
+}
+
+.table tbody td:nth-child(3)::before {
+  /* content: '#'; */
+  color: #a855f7;
+  font-weight: bold;
+}
+
+.course-id-badge {
+  background: linear-gradient(
+    135deg,
+    #ede9fe 0%,
+    #ddd6fe 100%
+  );
+  color: #7c3aed;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: inline-block;
+  border: 1px solid rgba(139, 124, 246, 0.2);
+}
+
+/* Empty state styling */
+.table tbody tr td[colspan] {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  padding: 3rem;
+  font-size: 1.1rem;
+  background: linear-gradient(
+    135deg,
+    #f9fafb 0%,
+    #f3f4f6 100%
+  );
+  border-radius: 0 0 20px 20px;
+  font-weight: 500;
+}
+
+.table tbody tr td[colspan]::before {
+  content: "📚";
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Action button styling - matching the purple theme */
+.table .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.table .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+.table .btn:hover::before {
+  left: 100%;
+}
+
+.table .btn-danger {
+  background: linear-gradient(
+    135deg,
+    #ef4444 0%,
+    #dc2626 100%
+  );
+  color: white;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.table .btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(
+    135deg,
+    #dc2626 0%,
+    #b91c1c 100%
+  );
+}
+
+/* Header section if you want to add a title */
+.orders-header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.orders-header h1 {
+  background: linear-gradient(
+    135deg,
+    #8b7cf6 0%,
+    #a855f7 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.orders-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .table-container {
+    margin: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    margin: 1rem;
+    border-radius: 14px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.8rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .table .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .course-id-badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .table thead th {
+    font-size: 0.75rem;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .table tbody td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .table .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  /* Stack table on very small screens */
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    border: 1px solid rgba(230, 230, 250, 0.3);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  .table tbody td {
+    display: block;
+    text-align: left;
+    border: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(230, 230, 250, 0.2);
+  }
+
+  .table tbody td:last-child {
+    border-bottom: none;
+    margin-top: 0.5rem;
+  }
+
+  .table tbody td:before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #8b7cf6;
+    display: inline-block;
+    width: 100px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table-container {
+  animation: fadeInUp 0.8s ease-out;
+}

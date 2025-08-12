@@ -1,0 +1,163 @@
+/* ----------------- Navbar ----------------- */
+.navbar-custom {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----------------- Hero Section ----------------- */
+.hero-section {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+.btn-hero {
+  background: white;
+  color: #667eea;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  margin-top: 25px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+  background: #f1f1f1;
+}
+
+/* ----------------- Section Titles ----------------- */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ----------------- Course Cards ----------------- */
+.course-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.course-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-description {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.course-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.course-category {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-enroll {
+  width: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn-enroll:hover {
+  opacity: 0.9;
+}
+
+/* ----------------- Loading Skeleton ----------------- */
+.loading-skeleton {
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f0f0f0 50%,
+    #e0e0e0 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 5px;
+}
+
+.loading-title {
+  height: 1.5rem;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.loading-description {
+  height: 1rem;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

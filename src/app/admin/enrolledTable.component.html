@@ -1,0 +1,35 @@
+<!-- Optional: Add this header section above your table -->
+<div class="orders-header">
+  <h1>Course Orders</h1>
+  <p>Manage and track course enrollments</p>
+</div>
+
+<div class="table-container">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Course Name</th>
+        <th>Course ID</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="getOrders().length == 0">
+        <td colspan="4">There are no orders</td>
+      </tr>
+      <ng-template ngFor let-o [ngForOf]="getOrders()">
+        <tr>
+          <td data-label="Student Name">{{ o.name }}</td>
+          <td data-label="Course Name">{{ o.course?.name }}</td>
+          <td data-label="Course ID">
+            <span class="course-id-badge">{{ o.course?.id }}</span>
+          </td>
+          <td data-label="Action">
+            <button class="btn btn-danger" (click)="delete(o.id)">Delete</button>
+          </td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+</div>

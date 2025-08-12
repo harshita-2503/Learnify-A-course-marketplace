@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-book-fill me-2"></i>
+        Learnify
+      </a>
+      <div class="ms-auto">
+        <a class="btn btn-admin-login" href="#" routerLink="/admin/">
+          <i class="bi bi-shield-lock me-1"></i>
+          Admin Login
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 hero-content">
+          <h1 class="hero-title">Discover Amazing Courses</h1>
+          <p class="hero-subtitle">
+            Explore our comprehensive collection of courses designed to help you master new skills and advance your
+            career.
+          </p>
+          <a (click)="scrollToCourses()" class="btn btn-hero" style="color: #667eea">
+            <i class="bi bi-arrow-down-circle me-2"></i>
+            Browse Courses
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class>
+    <section class="courses-section" id="courses">
+      <div class="container">
+        <div class>
+          <div class="col-12">
+            <h2 class="section-title">Featured Courses</h2>
+            <p class="section-subtitle">
+              Discover our most popular courses designed by industry experts to help you achieve your learning goals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Upar ka kuch kaam ka nahi hai-->
+        <div class="row g-4" *ngIf="products && products.length > 0">
+          <div class="col-lg-4 col-md-6" *ngFor="let c of products">
+            <div class="card course-card">
+              <div class="card-body">
+                <h3 class="course-title">{{ c.name }}</h3>
+                <p class="course-description">{{ c.description }}</p>
+
+                <div class="course-meta">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="course-price">₹{{ c.price | number : "1.0-0" }}</span>
+                    <span class="course-category">{{ c.category }}</span>
+                  </div>
+                  <button class="btn btn-enroll" [routerLink]="['/checkout', c.id]">
+                    <i class="bi bi-cart-plus me-2"></i>
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

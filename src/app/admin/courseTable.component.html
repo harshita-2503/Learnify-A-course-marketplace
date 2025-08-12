@@ -1,0 +1,31 @@
+<div class="orders-header">
+  <h1>Courses</h1>
+  <p>Manage and track Courses</p>
+</div>
+<div class="coursestable">
+  <table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of getCourses()">
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.category }}</td>
+        <td>{{ p.price | currency : "USD" : "symbol" : "2.2-2" }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning" [routerLink]="['/admin/main/courses/edit', p.id]">Edit</button>
+
+          <button class="btn btn-sm btn-danger" (click)="deleteCourse(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" routerLink="/admin/main/courses/create">Create New Product</button>
+</div>
